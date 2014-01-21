@@ -47,7 +47,7 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\
 " 继承前一行的缩进方式，特别适用于多行注释
 set autoindent
 " 为C程序提供自动缩进
-set smartindent
+" set smartindent
     
 " 使用C样式的缩进
 set cindent
@@ -59,3 +59,20 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible    " be iMproved
+filetype off        " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" vim-scripts repos
+Bundle 'hallison/vim-markdown.git'
+
+filetype plugin indent on    " required!
